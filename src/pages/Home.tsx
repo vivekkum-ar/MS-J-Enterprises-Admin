@@ -17,7 +17,8 @@ function Home() {
 
   return (
     <>
-    <h1 className="text-5xl mb-5 font-bold ">
+    <div className="bg-white">
+    <h1 className="text-5xl mb-5 font-bold text-gray-800">
       M/S Jaya Enterprises
     </h1>
       <form className="max-w-sm mx-auto">
@@ -71,6 +72,7 @@ function Home() {
         Total value of bill is: {formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}<br/>
         <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Proceed</button>
       </form>
+      </div>
     </>
   )
 }

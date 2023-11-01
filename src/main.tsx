@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 // import Blogs from "./pages/Blogs";
 // import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import BillPage from './pages/Billpage';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route index element={<Home />} />
           {/* <Route path="blogs" element={<Blogs />} /> */}
           {/* <Route path="contact" element={<Contact />} /> */}
+          <Route path="bill" element={<BillPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
