@@ -1,5 +1,6 @@
 import React from 'react'
 import { useFormData } from '../FormDataProvider';
+import { numberToWords } from '../components/numberToWords';
 
 interface BillPageProps {
   // Add your prop types here
@@ -381,9 +382,11 @@ return formattedDate;
             </tr>
             <tr style={{ height: '13.45pt'}}>
               <td width={349} colSpan={4} rowSpan={3} valign="top" style={{width: '261.5pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.5pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt'}}>Forty Three</span></span><span lang="EN-US" style={{fontSize: '12.0pt'}}> Thousand</span></p>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt'}}>Eight Hundred <span className="GramE">Sixty Five</span></span></p>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt'}}>INR</span></p>
+                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt'}}>{numberToWords(formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate))}</span></span>
+                {/* <span lang="EN-US" style={{fontSize: '12.0pt'}}> Thousand</span> */}
+                </p>
+                {/* <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt'}}>Eight Hundred <span className="GramE">Sixty Five</span></span></p> */}
+                {/* <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt'}}>INR</span></p> */}
               </td>
               <td width={284} colSpan={4} valign="top" style={{width: '212.65pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>Add:
