@@ -9,9 +9,11 @@ import Home from "./pages/Home";
 // import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
 import BillPage from './pages/Billpage';
+import { FormDataProvider } from './FormDataProvider';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <FormDataProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -24,5 +26,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Route>
       </Routes>
     </BrowserRouter>
+    </FormDataProvider>
   </React.StrictMode>,
 )

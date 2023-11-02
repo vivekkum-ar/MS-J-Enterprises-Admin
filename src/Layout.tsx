@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './Layout.css'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 function Layout() {
 useEffect(() => {

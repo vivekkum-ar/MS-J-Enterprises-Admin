@@ -1,10 +1,12 @@
 import React from 'react'
+import { useFormData } from '../FormDataProvider';
 
 interface BillPageProps {
   // Add your prop types here
 }
 
 const BillPage: React.FC<BillPageProps> = ({}) => {
+    const { formData, setFormData } = useFormData();
   return (
     <div className="WordSection1">
         <table className="MsoNormalTable" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse',   marginLeft: '6.75pt', marginRight: '6.75pt'}}>
@@ -35,10 +37,10 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
             </tr>
             <tr style={{ height: '19.85pt'}}>
               <td width={346} style={{width: '259.15pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><span className="SpellE"><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Ref.No</span></u></span></span><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>. :</span></u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>fk</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>-INF/504(</span><span lang="EN-US" style={{fontSize: '9.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>DECEmber</span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>)</span></p>
+                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><span className="SpellE"><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Ref.No</span></u></span></span><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>. :</span></u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>fk</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>{`-INF/`+`${formData.billNumber}`}(</span><span lang="EN-US" style={{fontSize: '9.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>{formData.billMonth}</span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>)</span></p>
               </td>
               <td width={382} style={{width: '286.6pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal" style={{marginBottom: '0cm', textAlign: 'right', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Date :</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}> 04/01/2024</span></p>
+                <p className="MsoNormal" style={{marginBottom: '0cm', textAlign: 'right', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Date :</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}> {formData.billDate}</span></p>
               </td>
             </tr>
             <tr style={{ height: '19.85pt'}}>
@@ -157,11 +159,11 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    24150</span></p>
+                    {formData.baseRent}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    24150</span></p>
+                    {formData.baseRent}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp; n/A</span></p>
@@ -171,7 +173,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>24150</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.baseRent}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -180,19 +182,19 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={189} valign="top" style={{width: '141.4pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span className="GramE"><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>Used(</span></b></span><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>in kms)&nbsp;&nbsp; </span></b></p>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>2085</span></b></p>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>(@₹94.66/Litre)</span></b></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>{formData.kmUsed}</span></b></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>{`(@₹`+`${formData.dieselRate}`+`/Litre)`}</span></b></p>
               </td>
               <td width={47} valign="top" style={{width: '35.45pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;1</span></p>
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.kmUsed/10 * formData.dieselRate}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.kmUsed/10 * formData.dieselRate}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -203,7 +205,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>19715</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.kmUsed/10 * formData.dieselRate}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -218,11 +220,11 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.parking}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.parking}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -233,7 +235,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>19715</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.parking}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -248,11 +250,11 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.tollTax}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.tollTax}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -263,7 +265,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>19715</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.tollTax}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -278,11 +280,11 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.overtime}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.overtime}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -293,7 +295,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>19715</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.overtime}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -309,11 +311,11 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.extraKms}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    19715</span></p>
+                    {formData.extraKms}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -324,7 +326,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>19715</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.extraKms}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -335,7 +337,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '16.0pt'}}>Total</span></b></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;43865</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -347,7 +349,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     <b>&nbsp;Total amount without Tax </b></span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;43865</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -379,7 +381,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
                     <b>&nbsp;Total amount with Tax</b></span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;43865</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '-21.2pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '10.85pt'}}>
