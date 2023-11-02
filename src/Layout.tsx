@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './Layout.css'
 import { Outlet } from "react-router-dom";
 
