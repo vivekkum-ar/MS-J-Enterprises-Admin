@@ -10,6 +10,8 @@ import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import BillPage from './pages/Billpage';
 import { FormDataProvider } from './FormDataProvider';
+import Login from './pages/auth/Login';
+import SignUp from './pages/auth/SignUp';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -21,6 +23,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route index element={<Home />} />
           {/* <Route path="blogs" element={<Blogs />} /> */}
           {/* <Route path="contact" element={<Contact />} /> */}
+          <Route path="signup" element={<SignUp />} />
+          <Route path="login" element={<Login />} />
           <Route path="bill" element={<BillPage />} />
           <Route path="*" element={<NoPage />} />
         </Route>
