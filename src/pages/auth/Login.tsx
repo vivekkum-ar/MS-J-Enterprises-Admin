@@ -1,9 +1,10 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useState } from 'react';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
+import React, { useEffect, useState } from 'react';
 import {auth} from "../../firebase";
 import AlertError from '../../components/alertError';
 import AlertSuccess from '../../components/alertSuccess';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../../components/Navbar';
 
 interface LoginProps {
   // Add your prop types here
@@ -11,6 +12,20 @@ interface LoginProps {
 
 const Login: React.FC<LoginProps> = ({}) => {
   const navigate = useNavigate();
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        // ...
+        navigate('/home');
+      } else {
+        // User is signed out
+      }
+    });
+  }, []);
     const [Credentials, setCredentials] = useState({
         email: 'email',
         password: 'password'
@@ -43,6 +58,7 @@ const Login: React.FC<LoginProps> = ({}) => {
     }
   return (
     <>
+    <Navbar Print={false} Logout={false}></Navbar>
      <div className="flex items-center justify-center min-h-screen">
       <div className="">
     <h1 className="text-5xl mb-5 font-bold text-gray-800">

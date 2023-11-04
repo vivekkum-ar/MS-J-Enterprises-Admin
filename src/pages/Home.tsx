@@ -3,6 +3,7 @@ import { useFormData } from '../FormDataProvider';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
 
 function Home() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function Home() {
   };
   return (
     <>
+    <Navbar Print={false} Logout={true}></Navbar>
     <div className="bg-white">
     <h1 className="text-5xl mb-5 font-bold text-gray-800">
       M/S Jaya Enterprises

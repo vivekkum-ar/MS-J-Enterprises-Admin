@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import './Layout.css'
 import { Outlet } from "react-router-dom";
-import Navbar from './components/Navbar';
 
 function Layout() {
 useEffect(() => {
@@ -11,7 +10,6 @@ useEffect(() => {
 
   return (
     <>
-    <Navbar></Navbar>
       <Outlet></Outlet>
     </>
   )

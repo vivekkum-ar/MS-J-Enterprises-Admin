@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useFormData } from '../FormDataProvider';
 import { numberToWords } from '../components/numberToWords';
+import Navbar from '../components/Navbar';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 interface BillPageProps {
   // Add your prop types here
 }
 
 const BillPage: React.FC<BillPageProps> = ({}) => {
+const navigate = useNavigate();
+
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const uid = user.uid;
+        // ...
+      } else {
+        // User is signed out
+        navigate('/login');
+      }
+    });
+  }, []);
+  
     const { formData
         // , setFormData 
     } = useFormData();
@@ -34,6 +54,8 @@ const formattedDate = `${day}-${month}-${year}`;
 return formattedDate;
     };
   return (
+    <>
+    <Navbar Print={true} Logout={false}></Navbar>
     <div className="WordSection1 px-4 max-w-screen-lg mx-auto relative">
         <img src="./bg.jpg" className='absolute px-32 pt-80' alt="" />
         
@@ -473,6 +495,7 @@ return formattedDate;
           </tbody></table>
         {/* <p className="MsoNormal"></p> */}
       </div>
+      </>
   )
 }
 
