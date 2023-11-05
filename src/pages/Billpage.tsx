@@ -56,13 +56,14 @@ return formattedDate;
   return (
     <>
     <Navbar Print={true} Logout={false} backBtn={true}></Navbar>
-    <div className="WordSection1 px-4 max-w-screen-lg mx-auto relative">
-        <img src="./bg.jpg" className='absolute px-32 pt-80' alt="" />
-        
+    <div className="WordSection1 max-w-screen-sm lg:max-w-screen-lg mx-auto px-0 lg:px-4 mt-10">
+      <div className="relative">
+        <img src="./bg.jpg" className='absolute px-0 pt-80' alt="" />
+        <div className="w-full mx-auto">
         <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse'}}>
-          <tbody><tr style={{  height: '19.85pt'}}>
+          <tbody><tr className='font-century' style={{  height: '19.85pt'}}>
               <td width={728} colSpan={2} style={{width: '545.75pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '-16.7pt', marginBottom: '0cm', marginLeft: '-18.0pt', textAlign: 'center', lineHeight: 'normal'}}><b><span style={{fontSize: '40.0pt', fontFamily: '"Century",serif'}}>&nbsp;</span></b><b><span lang="EN-US" style={{textShadow: "3px 4px #80808073", fontSize: '40.0pt', fontFamily: '"Century",serif'}}>M/S JAYA PRASAD</span></b></p>
+                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '-16.7pt', marginBottom: '0cm', marginLeft: '-18.0pt', textAlign: 'center', lineHeight: 'normal'}}><b><span style={{fontSize: '40.0pt'}}>&nbsp;</span></b><b><span lang="EN-US" style={{textShadow: "3px 4px #80808073", fontSize: '40.0pt'}}>M/S JAYA PRASAD</span></b></p>
               </td>
             </tr>
             <tr style={{ height: '19.85pt'}}>
@@ -70,45 +71,45 @@ return formattedDate;
                 <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className='flex justify-center' lang="EN-US" style={{}}><img width={698} height={45} id="_x0000_i1025" src="./header.jpg" /></span></p>
               </td>
             </tr>
-            <tr style={{ height: '19.85pt'}}>
+            <tr className="font-cambria" style={{ height: '19.85pt'}}>
               <td width={346} style={{width: '259.15pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>Contact Us:</span></u></b></p>
-                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>Mobile :</span></u></span><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}> </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>+919199268309</span></p>
-                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>Alternate: </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>+919835564510</span></p>
-                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>E-mail <span className="GramE">: <span style={{textDecoration: 'none'}}>&nbsp;jayapd1979@gmail.com</span></span></span></u></p>
+                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Contact Us:</span></u></b></p>
+                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Mobile :</span></u></span><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}> </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>+919199268309</span></p>
+                <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Alternate: </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>+919835564510</span></p>
+                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>E-mail <span className="GramE">: <span style={{textDecoration: 'none'}}>&nbsp;jayapd1979@gmail.com</span></span></span></u></p>
               </td>
               <td width={382} style={{width: '286.6pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>Business <span className="GramE">Address<span style={{textDecoration: 'none'}}> :</span></span></span></u></b></p>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="SpellE"><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>H.No</span></span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}> B/b block 1283/84 , New line ,</span></p>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}>Sonari ,</span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', fontFamily: '"Cambria",serif', color: 'black'}}> Near Sonari Airport ,</span></p>
-                <p className="MsoNormal"  style={{marginBottom: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Jamshedpur,
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Business <span className="GramE">Address<span style={{textDecoration: 'none'}}> :</span></span></span></u></b></p>
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="SpellE"><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>H.No</span></span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> B/b block 1283/84 , New line ,</span></p>
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>Sonari ,</span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> Near Sonari Airport ,</span></p>
+                <p className="MsoNormal"  style={{marginBottom: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt', color: 'black'}}>Jamshedpur,
                     831011</span></p>
               </td>
             </tr>
-            <tr style={{ height: '19.85pt'}}>
+            <tr className='font-cambria' style={{ height: '19.85pt'}}>
               <td width={346} style={{textAlign:"left", border: 'none', borderBottom: 'solid windowtext 2.25pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><span className="SpellE"><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Ref.No</span></u></span></span><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>. :</span></u><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>fk</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>{`-INF/`+`${formData.billNumber}`}(</span><span lang="EN-US" style={{fontSize: '9.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>{monthNoToName(formData.billMonth)}</span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black', textTransform: 'uppercase'}}>)</span></p>
+                <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><span className="SpellE"><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>Ref.No</span></u></span></span><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>. :</span></u><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black', textTransform: 'uppercase'}}>fk</span></span><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black', textTransform: 'uppercase'}}>{`-INF/`+`${formData.billNumber}`}(</span><span lang="EN-US" style={{fontSize: '9.0pt', color: 'black', textTransform: 'uppercase'}}>{monthNoToName(formData.billMonth)}</span><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black', textTransform: 'uppercase'}}>)</span></p>
               </td>
               <td width={382} style={{width: '286.6pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal" style={{marginBottom: '0cm', textAlign: 'right', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}>Date :</span></span><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Cambria",serif', color: 'black'}}> {formatedDate(formData.billDate)}</span></p>
+                <p className="MsoNormal" style={{marginBottom: '0cm', textAlign: 'right', lineHeight: 'normal'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>Date :</span></span><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}> {formatedDate(formData.billDate)}</span></p>
               </td>
             </tr>
-            <tr style={{ height: '19.85pt'}}>
+            <tr className='font-imprint' style={{ height: '19.85pt'}}>
               <td width={728} colSpan={2} style={{width: '545.75pt', background: 'white', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '-16.7pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '40.0pt', fontFamily: '"Imprint MT Shadow"', color: 'black'}}>Invoice</span></p>
+                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '-16.7pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '40.0pt', color: 'black'}}>Invoice</span></p>
               </td>
             </tr>
           </tbody></table>
-        {/* <p className="MsoNormal"><span style={{position: 'absolute', zIndex: 251650047}}><span lang="EN-US" style={{fontSize: '2.0pt', lineHeight: '106%'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </span></span></p> */}
-        <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{ borderCollapse: 'collapse'}}>
+          </div>        
+          </div>        
+        <table className="font-calibri w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{ borderCollapse: 'collapse'}}>
           <tbody><tr style={{  height: '12.1pt'}}>
               <td width={377} colSpan={5} valign="top" style={{width: '282.75pt', border: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '12.1pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Arial",sans-serif', color: 'black'}}>Bill To
+                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>Bill To
                       Party</span></b></p>
               </td>
               <td width={387} colSpan={4} valign="top" style={{width: '290.6pt', borderTop: 'solid windowtext 1.5pt', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '12.1pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt', fontFamily: '"Arial",sans-serif', color: 'black'}}>Place of
+                <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>Place of
                       Supply</span></b></p>
               </td>
             </tr>
@@ -441,10 +442,10 @@ return formattedDate;
                 <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>Bank Details</span></b></p>
               </td>
               <td width={416} colSpan={5} rowSpan={4} valign="top" style={{width: '11.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.5pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '10.85pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><i><span lang="EN-US" style={{fontFamily: '"Bahnschrift Light SemiCondensed",sans-serif'}}>&nbsp; <span style={{color: 'gray'}}>Certifies that the
+                <p className="font-bahnschrift" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><i><span lang="EN-US" style={{}}>&nbsp; <span style={{color: 'gray'}}>Certifies that the
                               particular given above are true and correct</span></span></i></p>
                           <div className="flex justify-center" style={{ marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal' }}>
-                              <img width={156} height={47} src="./sign.png" />
+                              <img style={{mixBlendMode:"multiply"}} width={156} height={47} src="./sign.png" />
                           </div>
                 <p className="MsoNormal"  style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span className="SpellE"><span lang="EN-US" style={{fontSize: '12.0pt'}}>Authorised</span></span><span lang="EN-US" style={{fontSize: '12.0pt'}}> Signatory: M/S
                     Jaya Prasad</span></p>
@@ -486,13 +487,18 @@ return formattedDate;
             </tr>
           </tbody></table>
         {/* <p className="MsoNormal" style={{marginRight: '0pt'}}><span lang="EN-US" style={{}}>&nbsp;</span></p> */}
-        <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse'}}>
-          <tbody><tr style={{height: '19.85pt'}}>
-              <td width={756} style={{width: '20.0cm', borderTop: 'solid windowtext 2.25pt', borderLeft: 'none', borderBottom: 'solid windowtext 2.25pt', borderRight: 'none', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal"  style={{marginBottom: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{color: 'black'}}>&nbsp;</span></p>
-              </td>
-            </tr>
-          </tbody></table>
+        <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse', margin: '0 auto'}}>
+  <tbody>
+    <tr style={{height: '19.85pt'}}>
+      <td width={756} style={{width: '20.0cm', borderTop: 'solid windowtext 2.25pt', borderLeft: 'none', borderBottom: 'solid windowtext 2.25pt', borderRight: 'none', background: '#D0CECE', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
+        <p className="MsoNormal" style={{marginBottom: '0cm', textAlign: 'center', lineHeight: 'normal'}}>
+          <span lang="EN-US" style={{color: 'black'}}>&nbsp;</span>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
         {/* <p className="MsoNormal"></p> */}
       </div>
       </>

@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Cambria";
+  src: url("/src/assets/fonts/Cambria-Font-For-Windows.ttf") format("truetype"); 
+}
+@font-face {
+  font-family: "Century";
+  src: url("/src/assets/fonts/century.ttf") format("truetype"); 
+}
+@font-face {
+  font-family: "Imprint";
+  src: url("/src/assets/fonts/IMPRISHA.TTF") format("truetype"); 
+}
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("/src/assets/fonts/BAHNSCHRIFT.TTF") format("truetype"); 
+}
+@font-face {
+  font-family: "Calibri";
+  src: url("/src/assets/fonts/Calibri-Regular.ttf") format("truetype"); 
+}
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

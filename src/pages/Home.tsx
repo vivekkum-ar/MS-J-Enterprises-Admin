@@ -30,7 +30,7 @@ function Home() {
   return (
     <>
     <Navbar Print={false} Logout={true}></Navbar>
-    <div className="bg-white">
+    <div className="bg-white mt-16 mx-4 md:mx-0">
     <h1 className="text-5xl mb-5 font-bold text-gray-800">
       M/S Jaya Enterprises
     </h1>

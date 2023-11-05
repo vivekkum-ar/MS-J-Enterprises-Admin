@@ -52,17 +52,17 @@ const Navbar: React.FC<NavbarProps> = ({Logout,Print,backBtn}) => {
             // Set print in progress to false after 3 seconds of window.print() being called
             setTimeout(() => {
                 setPrintInProgress(false);
-            }, 1000);
+            }, 10000);
         }, 1000);
     }
     
 
     return (
-        <nav className={`${printInProgress == true ? "hidden" : ""}  border-b-4 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700`}>
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-4">
+        <nav className={`${printInProgress == true ? "hidden" : ""} z-40 w-full top-0 fixed border-b-4 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700`}>
+            <div className="sm:max-w-screen-sm lg:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <img src="./bg.jpg" className="h-8 border-2 rounded-full border-black" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl whitespace-nowrap dark:text-white font-bold">M/S Jaya Enterprises</span>
+                    <span className="self-center text-sm md:text-2xl whitespace-nowrap dark:text-white font-bold">M/S Jaya Enterprises</span>
                 </a>
                 <div className="">
   <button type="button" onClick={(e) => {e.preventDefault(); navigate("/home");}} className={`${backBtn == true ? "" : "hidden"} me-4 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-full text-2xl px-2.5 pb-1 text-center `}>{"<"}</button>
