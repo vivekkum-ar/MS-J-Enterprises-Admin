@@ -55,7 +55,7 @@ return formattedDate;
     };
   return (
     <>
-    <Navbar Print={true} Logout={false}></Navbar>
+    <Navbar Print={true} Logout={false} backBtn={true}></Navbar>
     <div className="WordSection1 px-4 max-w-screen-lg mx-auto relative">
         <img src="./bg.jpg" className='absolute px-32 pt-80' alt="" />
         
