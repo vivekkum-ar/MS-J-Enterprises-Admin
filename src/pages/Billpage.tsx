@@ -58,7 +58,7 @@ return formattedDate;
     <Navbar Print={true} Logout={false} backBtn={true}></Navbar>
     <div className="WordSection1 max-w-screen-sm lg:max-w-screen-lg mx-auto px-0 lg:px-4 mt-10">
       <div className="relative">
-        <img src="./bg.jpg" className='absolute px-0 pt-80' alt="" />
+        <img src="./bg.jpg" className='absolute px-0 pt-72' alt="" />
         <div className="w-full mx-auto">
         <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse'}}>
           <tbody><tr className='font-century' style={{  height: '19.85pt'}}>

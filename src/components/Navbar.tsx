@@ -61,7 +61,7 @@ const Navbar: React.FC<NavbarProps> = ({Logout,Print,backBtn}) => {
         <nav className={`${printInProgress == true ? "hidden" : ""} z-40 w-full top-0 fixed border-b-4 border-gray-200 bg-gray-50 dark:bg-gray-800 dark:border-gray-700`}>
             <div className="sm:max-w-screen-sm lg:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 px-4">
                 <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="./bg.jpg" className="h-8 border-2 rounded-full border-black" alt="Flowbite Logo" />
+                    <img src="./logo.png" className="h-8 scale-150 border-2 rounded-full border-black" alt="Flowbite Logo" />
                     <span className="self-center text-sm md:text-2xl whitespace-nowrap dark:text-white font-bold">M/S Jaya Enterprises</span>
                 </a>
                 <div className="">
