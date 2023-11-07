@@ -30,8 +30,8 @@ function Home() {
   return (
     <>
     <Navbar Print={false} Logout={true}></Navbar>
-    <div className="bg-white mt-16 mx-4 md:mx-0">
-    <h1 className="text-5xl mb-5 font-bold text-gray-800">
+    <div className="bg-white mt-24 md:mt-20 mx-4 md:mx-0">
+    <h1 className="font-century text-3xl md:text-5xl  mb-5 font-bold text-gray-800">
       M/S Jaya Enterprises
     </h1>
       <form className="max-w-sm mx-auto">

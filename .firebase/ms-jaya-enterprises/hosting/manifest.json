@@ -5,7 +5,7 @@
     "icons": [
       {
         "src": "/favicon.ico",
-        "sizes": "64x64 32x32 24x24 16x16",
+        "sizes": "48x48",
         "type": "image/x-icon"
       },
       {
@@ -24,8 +24,22 @@
         "sizes": "512x512"
       }
     ],
-    "id": "com.jayaenterprises",
-    "start_url": "/",
+    "screenshots": [
+      {
+        "src": "/screenshot2.png",
+        "type": "image/png",
+        "sizes": "540x720",
+        "form_factor": "narrow"
+      },
+      {
+        "src": "/screenshot1.png",
+        "type": "image/jpg",
+        "sizes": "720x540",
+        "form_factor": "wide"
+      }
+    ],
+    "start_url": "/home",
+    "orientation": "portrait",
     "display": "standalone",
     "theme_color": "#000000",
     "background_color": "#ffffff"

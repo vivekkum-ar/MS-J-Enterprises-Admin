@@ -1,6 +1,3 @@
-//@ts-ignore
-
-
 import React, { useEffect } from 'react'
 import { useFormData } from '../FormDataProvider';
 import { numberToWords } from '../components/numberToWords';
@@ -59,9 +56,9 @@ return formattedDate;
   return (
     <>
     <Navbar Print={true} Logout={false} backBtn={true}></Navbar>
-    <div className="WordSection1 max-w-screen-sm lg:max-w-screen-lg mx-auto px-0 lg:px-4 mt-10">
+    <div id='WordSection1' className="WordSection1 max-w-screen-sm lg:max-w-screen-lg mx-auto px-0 lg:px-4 mt-10">
       <div className="relative">
-        <img src="./bg.jpg" className='absolute px-0 pt-72' alt="" />
+        <img src="./bg.jpg" className='absolute px-0 pt-64' alt="" />
         <div className="w-full mx-auto">
         <table className="w-full relative" border={0} cellSpacing={0} cellPadding={0} align="left" style={{borderCollapse: 'collapse'}}>
           <tbody><tr className='font-century' style={{  height: '19.85pt'}}>
@@ -75,17 +72,17 @@ return formattedDate;
               </td>
             </tr>
             <tr className="font-cambria" style={{ height: '19.85pt'}}>
-              <td width={346} style={{width: '259.15pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
+              <td width={346} style={{textAlign:"left",width: '259.15pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
                 <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Contact Us:</span></u></b></p>
                 <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><span className="GramE"><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Mobile :</span></u></span><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}> </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>+919199268309</span></p>
                 <p className="MsoNormal" style={{marginTop: '6.0pt', marginRight: '0cm', marginBottom: '0cm', marginLeft: '0cm', lineHeight: '50%'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Alternate: </span></u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>+919835564510</span></p>
                 <p className="MsoNormal" style={{marginBottom: '0cm', lineHeight: 'normal'}}><u><span lang="EN-US" style={{fontSize: '14.0pt', color: 'black'}}>E-mail <span className="GramE">: <span style={{textDecoration: 'none'}}>&nbsp;jayapd1979@gmail.com</span></span></span></u></p>
               </td>
               <td width={382} style={{width: '286.6pt', border: 'none', borderBottom: 'solid windowtext 2.25pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '19.85pt'}}>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Business <span className="GramE">Address<span style={{textDecoration: 'none'}}> :</span></span></span></u></b></p>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="SpellE"><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>H.No</span></span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> B/b block 1283/84 , New line ,</span></p>
-                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginRight: '-16.55pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'center', lineHeight: '50%'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>Sonari ,</span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> Near Sonari Airport ,</span></p>
-                <p className="MsoNormal"  style={{marginBottom: '0cm', textAlign: 'center', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt', color: 'black'}}>Jamshedpur,
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'right', lineHeight: '50%'}}><b><u><span lang="EN-US" style={{fontSize: '14.0pt', lineHeight: '50%', color: 'black'}}>Business <span className="GramE">Address<span style={{textDecoration: 'none'}}> :</span></span></span></u></b></p>
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'right', lineHeight: '50%'}}><span className="SpellE"><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>H.No</span></span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> B/b block 1283/84 , New line ,</span></p>
+                <p className="MsoNormal"  style={{marginTop: '6.0pt', marginBottom: '0cm', marginLeft: '0cm', textAlign: 'right', lineHeight: '50%'}}><span className="GramE"><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}>Sonari ,</span></span><span lang="EN-US" style={{fontSize: '12.0pt', lineHeight: '50%', color: 'black'}}> Near Sonari Airport ,</span></p>
+                <p className="MsoNormal"  style={{marginBottom: '0cm', textAlign: 'right', lineHeight: 'normal'}}><span lang="EN-US" style={{fontSize: '12.0pt', color: 'black'}}>Jamshedpur,
                     831011</span></p>
               </td>
             </tr>
@@ -482,7 +479,7 @@ return formattedDate;
                 {/* <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p> */}
                 {/* <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p> */}
                 {/* <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p> */}
-                <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p>
+                {/* <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p> */}
                 <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p>
                 <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p>
                 <p className="MsoNormal" style={{marginBottom: '0cm'}}><span style={{fontSize: '10.0pt', lineHeight: '106%', fontFamily: '"Times New Roman",serif'}}>&nbsp;</span></p>

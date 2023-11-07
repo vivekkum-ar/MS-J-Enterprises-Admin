@@ -61,7 +61,7 @@ const Login: React.FC<LoginProps> = ({}) => {
     <Navbar Print={false} Logout={false}></Navbar>
      <div className="flex items-center justify-center min-h-screen mx-4 md:mx-0">
       <div className="">
-    <h1 className="text-5xl mb-5 font-bold text-gray-800">
+    <h1 className="font-century text-3xl md:text-5xl mb-5 font-bold text-gray-800">
       M/S Jaya Enterprises
     </h1>
 
