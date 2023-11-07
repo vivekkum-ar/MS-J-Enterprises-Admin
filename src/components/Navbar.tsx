@@ -54,6 +54,19 @@ const Navbar: React.FC<NavbarProps> = ({Logout,Print,backBtn}) => {
                 setPrintInProgress(false);
             }, 10000);
         }, 1000);
+
+        // const generatePDF = () => {
+        //     const section = document.querySelector("#WordSection1");
+        //     if (section !== null) {
+        //         const doc = new jsPDF("p", "pt", "a4");
+        //         doc.html(section as HTMLElement, {
+        //             callback: function(pdf) {
+        //                 pdf.save('Bill.pdf');
+        //                 // setPrintInProgress(false);
+        //             }
+        //         });
+        //     }
+        // };
     }
     
 
