@@ -1,3 +1,4 @@
+// @ts-ignore
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './pages/Layout.tsx'
@@ -8,6 +9,7 @@ import Home from "./pages/Home";
 // import Blogs from "./pages/Blogs";
 // import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+//@ts-ignore
 import BillPage from './pages/Billpage';
 import { FormDataProvider } from './FormDataProvider';
 import Login from './pages/auth/Login';

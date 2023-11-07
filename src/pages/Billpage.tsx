@@ -1,3 +1,6 @@
+//@ts-ignore
+
+
 import React, { useEffect } from 'react'
 import { useFormData } from '../FormDataProvider';
 import { numberToWords } from '../components/numberToWords';
