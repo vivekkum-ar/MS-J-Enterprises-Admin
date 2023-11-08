@@ -2,7 +2,7 @@ import '../Layout.css'
 import { useFormData } from '../FormDataProvider';
 import { useNavigate } from 'react-router-dom';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 
 function Home() {
@@ -102,8 +102,10 @@ function Home() {
               </div>
             </div>
           </div>
-
-          Total value of bill is: {formData.baseRent + ((formData.kmUsed / 10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms / 10 * formData.dieselRate)}<br />
+          <b>Total value of bill is:</b>
+          <div className="text-3xl mb-5 font-bold font-cambria">
+           {formData.baseRent + ((formData.kmUsed / 10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms / 10 * formData.dieselRate)}<br />
+          </div>
           {/* <Link to="/bill"> */}
           <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" onClick={(e) => {
             e.preventDefault();
