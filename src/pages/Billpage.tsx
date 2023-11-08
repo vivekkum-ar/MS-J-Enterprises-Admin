@@ -259,7 +259,7 @@ return formattedDate;
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.kmUsed/10 * formData.dieselRate}</span></p>
               </td>
             </tr>
-            <tr style={{ height: '13.45pt'}}>
+            {formData.checkparking && <tr style={{ height: '13.45pt'}}>
               <td width={37} valign="top" style={{width: '27.95pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>3.</span></b></p>
               </td>
@@ -288,8 +288,8 @@ return formattedDate;
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.parking}</span></p>
               </td>
-            </tr>
-            <tr style={{ height: '13.45pt'}}>
+            </tr>}
+            {    formData.checktollTax && <tr style={{ height: '13.45pt'}}>
               <td width={37} valign="top" style={{width: '27.95pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>4.</span></b></p>
               </td>
@@ -318,8 +318,8 @@ return formattedDate;
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.tollTax}</span></p>
               </td>
-            </tr>
-            <tr style={{ height: '13.45pt'}}>
+            </tr>}
+            {    formData.checkovertime && <tr style={{ height: '13.45pt'}}>
               <td width={37} valign="top" style={{width: '27.95pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>5.</span></b></p>
               </td>
@@ -348,8 +348,8 @@ return formattedDate;
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.overtime}</span></p>
               </td>
-            </tr>
-            <tr style={{ height: '13.45pt'}}>
+            </tr>}
+            {    formData.checkextraKms && <tr style={{ height: '13.45pt'}}>
               <td width={37} valign="top" style={{width: '27.95pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>6.</span></b></p>
               </td>
@@ -379,7 +379,7 @@ return formattedDate;
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.extraKms}</span></p>
               </td>
-            </tr>
+            </tr>}
             <tr style={{ height: '13.45pt'}}>
               <td width={37} valign="top" style={{width: '27.95pt', borderTop: 'none', borderLeft: 'solid windowtext 1.5pt', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '12.0pt'}}>7.</span></b></p>

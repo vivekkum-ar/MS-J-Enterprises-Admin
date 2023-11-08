@@ -6,12 +6,6 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 
 function Home() {
-  const [checkBoxData, setcheckBoxData] = useState({
-    checkparking: false,
-    checktollTax: false,
-    checkovertime: false,
-    checkextraKms: false
-  });
 
   useEffect(() => {
     const auth = getAuth();
@@ -73,38 +67,38 @@ function Home() {
               <div className="mb-5 text-start">
                 {/* <label htmlFor="Parking" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label> */}
                 <label className="inline-flex items-center cursor-pointer">
-                  <input type="checkbox" checked={checkBoxData.checkparking} onChange={() => {setcheckBoxData({...checkBoxData,checkparking:!checkBoxData.checkparking})}} className="sr-only peer" />
+                  <input type="checkbox" checked={formData.checkparking} onChange={() => {setFormData({...formData,checkparking:!formData.checkparking})}} className="sr-only peer" />
                   <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
                   <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Parking</span>
                 </label>
-                <input type="number" id="parking" value={formData.parking} onChange={(e) => { setFormData({ ...formData, parking: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter parking rate e.g. 100" required disabled={!checkBoxData.checkparking} />
+                <input type="number" id="parking" value={formData.parking} onChange={(e) => { setFormData({ ...formData, parking: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter parking rate e.g. 100" required disabled={!formData.checkparking} />
               </div>
               <div className="mb-5 text-start">
                 {/* <label htmlFor="Toll Tax" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label> */}
                 <label className="inline-flex items-center cursor-pointer">
-                  <input type="checkbox" checked={checkBoxData.checktollTax} onChange={() => {setcheckBoxData({...checkBoxData,checktollTax:!checkBoxData.checktollTax})}} className="sr-only peer" />
+                  <input type="checkbox" checked={formData.checktollTax} onChange={() => {setFormData({...formData,checktollTax:!formData.checktollTax})}} className="sr-only peer" />
                   <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
                   <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Toll Tax</span>
                 </label>
-                <input type="number" id="tollTax" value={formData.tollTax} onChange={(e) => { setFormData({ ...formData, tollTax: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Toll Tax e.g. 100" required disabled={!checkBoxData.checktollTax} />
+                <input type="number" id="tollTax" value={formData.tollTax} onChange={(e) => { setFormData({ ...formData, tollTax: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Toll Tax e.g. 100" required disabled={!formData.checktollTax} />
               </div>
               <div className="mb-5 text-start">
                 {/* <label htmlFor="Overtime" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label> */}
                 <label className="inline-flex items-center cursor-pointer">
-                  <input type="checkbox" checked={checkBoxData.checkovertime} onChange={() => {setcheckBoxData({...checkBoxData,checkovertime:!checkBoxData.checkovertime})}} className="sr-only peer" />
+                  <input type="checkbox" checked={formData.checkovertime} onChange={() => {setFormData({...formData,checkovertime:!formData.checkovertime})}} className="sr-only peer" />
                   <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
                   <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Overtime</span>
                 </label>
-                <input type="number" id="overtime" value={formData.overtime} onChange={(e) => { setFormData({ ...formData, overtime: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Overtime Rate e.g. 100" required disabled={!checkBoxData.checkovertime} />
+                <input type="number" id="overtime" value={formData.overtime} onChange={(e) => { setFormData({ ...formData, overtime: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Enter Overtime Rate e.g. 100" required disabled={!formData.checkovertime} />
               </div>
               <div className="mb-5 text-start">
                 {/* <label htmlFor="Extra used for kilometer (in kms)" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label> */}
                 <label className="inline-flex items-center cursor-pointer">
-                  <input type="checkbox" checked={checkBoxData.checkextraKms} onChange={() => {setcheckBoxData({...checkBoxData,checkextraKms:!checkBoxData.checkextraKms})}} className="sr-only peer" />
+                  <input type="checkbox" checked={formData.checkextraKms} onChange={() => {setFormData({...formData,checkextraKms:!formData.checkextraKms})}} className="sr-only peer" />
                   <div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600" />
                   <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Extra kilometer</span>
                 </label>
-                <input type="number" id="extraKms" value={formData.extraKms} onChange={(e) => { setFormData({ ...formData, extraKms: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Extra used for kilometer (in kms) rate" required disabled={!checkBoxData.checkextraKms} />
+                <input type="number" id="extraKms" value={formData.extraKms} onChange={(e) => { setFormData({ ...formData, extraKms: parseFloat(parseFloat(e.target.value).toFixed(3)) }) }} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Extra used for kilometer (in kms) rate" required disabled={!formData.checkextraKms} />
               </div>
             </div>
           </div>

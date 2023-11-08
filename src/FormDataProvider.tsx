@@ -25,6 +25,10 @@ export const FormDataProvider = ({ children }: { children: ReactNode }) => {
     tollTax: 0,
     overtime: 0,
     extraKms: 0,
+    checkparking: false,
+    checktollTax: false,
+    checkovertime: false,
+    checkextraKms: false
   });
 
   return (
