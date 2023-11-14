@@ -2,6 +2,7 @@ import { signOut } from 'firebase/auth';
 import React, { useState } from 'react'
 import { auth } from '../firebase';
 import { useNavigate } from 'react-router-dom';
+// import jsPDF from 'jspdf';
 
 interface NavbarProps {
     // Add your prop types here
@@ -52,22 +53,29 @@ const Navbar: React.FC<NavbarProps> = ({Logout,Print,backBtn}) => {
             // Set print in progress to false after 3 seconds of window.print() being called
             setTimeout(() => {
                 setPrintInProgress(false);
-            }, 10000);
+            }, 20000);
         }, 1000);
 
-        // const generatePDF = () => {
-        //     const section = document.querySelector("#WordSection1");
-        //     if (section !== null) {
-        //         const doc = new jsPDF("p", "pt", "a4");
-        //         doc.html(section as HTMLElement, {
-        //             callback: function(pdf) {
-        //                 pdf.save('Bill.pdf');
-        //                 // setPrintInProgress(false);
-        //             }
-        //         });
-        //     }
-        // };
     }
+    // const generatePDF = (e:any) => {
+    //     e.preventDefault();
+    //     const section = document.querySelector("#WordSection1");
+    //     if (section !== null) {
+    //         const doc = new jsPDF("p", "pt","a4");
+    //         doc.html(section as HTMLElement, {
+    //             width: 520,
+    //             margin: [0 , 10, 0, 35],
+    //             windowWidth: 900,
+    //             // margin: 1,
+    //             // html2canvas:  {scale: 0.37},
+    //             // windowWidth: 700,
+    //             callback: function(pdf) {
+    //                 pdf.save('Bill.pdf');
+    //                 // setPrintInProgress(false);
+    //             },
+    //         });
+    //     }
+    // };
     
 
     return (
