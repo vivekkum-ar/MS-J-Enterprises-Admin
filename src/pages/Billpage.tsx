@@ -13,8 +13,9 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
   const navigate = useNavigate();
   const [Obj,setObj] = useState({"Parking":0,"TollTax":0,"Overtime":0,"ExtraKms":0});
   const { formData
-      // , setFormData 
+    // , setFormData 
   } = useFormData();
+  var totalVar = formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)
   useEffect(() => {
     setObj(prevObj => {
         let sno = 2;
@@ -35,7 +36,7 @@ const BillPage: React.FC<BillPageProps> = ({}) => {
             prevObj["ExtraKms"] = sno;
         }
         return { ...prevObj };
-    });
+      });
 }, [formData]);
 
     
@@ -77,7 +78,27 @@ const year = date.getFullYear();
 const formattedDate = `${day}-${month}-${year}`;
 return formattedDate;
     };
-  return (
+
+    const previousMonth = () => {
+      // Assuming formData.billDate is a string in the format "YYYY-MM-DD"
+const billDate = new Date(formData.billDate);
+
+// Get the previous month's index (0-indexed)
+const previousMonthIndex = billDate.getMonth() - 1;
+
+// Create a new Date object for the previous month
+const previousMonth = new Date(billDate.getFullYear(), previousMonthIndex, 1);
+
+// Format the month name (e.g., "October")
+const monthName = previousMonth.toLocaleString('en-US', { month: 'long' });
+
+// Construct the bill title
+const billTitle = `Bill for the month of ${monthName} ${billDate.getFullYear()}`;
+return billTitle;
+    }
+
+    
+    return (
     <>
     <Navbar Print={true} Logout={false} backBtn={true}></Navbar>
     <div id='WordSection1' className="WordSection1 max-w-screen-sm lg:max-w-screen-lg mx-auto px-0 lg:px-4 mt-10">
@@ -167,7 +188,7 @@ return formattedDate;
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt'}}>State:</span></b><span lang="EN-US" style={{fontSize: '14.0pt'}}> Jharkhand</span></p>
               </td>
               <td width={387} colSpan={4} valign="top" style={{width: '290.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '12.1pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt'}}>&nbsp;</span></b></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '14.0pt'}}>{previousMonth()}</span></b></p>
               </td>
             </tr>
             <tr style={{ height: '12.1pt'}}>
@@ -265,11 +286,11 @@ return formattedDate;
               </td>
               <td width={76} valign="top" style={{width: '2.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    {formData.kmUsed/10 * formData.dieselRate}</span></p>
+                    {(formData.kmUsed/10 * formData.dieselRate).toPrecision(7)}</span></p>
               </td>
               <td width={151} colSpan={2} valign="top" style={{width: '4.0cm', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    {formData.kmUsed/10 * formData.dieselRate}</span></p>
+                    {(formData.kmUsed/10 * formData.dieselRate).toPrecision(7)}</span></p>
               </td>
               <td width={66} valign="top" style={{width: '49.6pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.0pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -280,7 +301,7 @@ return formattedDate;
                     -</span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{formData.kmUsed/10 * formData.dieselRate}</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>{(formData.kmUsed/10 * formData.dieselRate).toPrecision(7)}</span></p>
               </td>
             </tr>
             {formData.checkparking && <tr style={{ height: '13.45pt'}}>
@@ -412,7 +433,7 @@ return formattedDate;
                 <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><b><span lang="EN-US" style={{fontSize: '16.0pt'}}>Total</span></b></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{totalVar.toPrecision(7)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -424,7 +445,7 @@ return formattedDate;
                     <b>&nbsp;Total amount without Tax </b></span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{totalVar.toPrecision(7)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '13.45pt'}}>
@@ -458,7 +479,7 @@ return formattedDate;
                     <b>&nbsp;Total amount with Tax</b></span></p>
               </td>
               <td width={132} valign="top" style={{width: '99.2pt', borderTop: 'none', borderLeft: 'none', borderBottom: 'solid windowtext 1.0pt', borderRight: 'solid windowtext 1.5pt', padding: '0cm 5.4pt 0cm 5.4pt', height: '13.45pt'}}>
-                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{formData.baseRent + ((formData.kmUsed/10) * formData.dieselRate) + formData.parking + formData.tollTax + formData.overtime + (formData.extraKms/10 * formData.dieselRate)}</span></p>
+                <p className="MsoNormal" style={{marginTop: '0cm', marginRight: '0pt', marginBottom: '0cm', marginLeft: '0cm', lineHeight: 'normal'}}><span lang="EN-US" style={{}}>&nbsp;&nbsp;{Math.floor(totalVar)}</span></p>
               </td>
             </tr>
             <tr style={{ height: '10.85pt'}}>

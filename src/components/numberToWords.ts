@@ -5,7 +5,7 @@
 */
 
 export const numberToWords = (num:number) => {
-
+    num = Math.floor(num); // Remove the decimal part of the number
     // Arrays to hold words for single-digit, double-digit, and below-hundred numbers
     const single_digit = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']
     const double_digit = ['Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen']

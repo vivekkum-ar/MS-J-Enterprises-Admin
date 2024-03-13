@@ -16,10 +16,10 @@ export const useFormData = () => {
 export const FormDataProvider = ({ children }: { children: ReactNode }) => {
   const [formData, setFormData] = useState({
     billNumber: 0,
-    billMonth: '',
+    billMonth: 'Nov',
     billDate: '',
     baseRent: 24150,
-    kmUsed: 0,
+    kmUsed: 2000.1,
     dieselRate: 92.67,
     parking: 0,
     tollTax: 0,
